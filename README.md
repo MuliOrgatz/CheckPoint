@@ -46,6 +46,10 @@ room-booking-platform/
 - **Database:** PostgreSQL
 - **Cache/Locking:** Redis
 
+
+<img width="1347" height="876" alt="image" src="https://github.com/user-attachments/assets/c6c9eb30-be82-45f1-9bcf-575aa7f4926f" />
+
+
 ## License
 
 MIT
