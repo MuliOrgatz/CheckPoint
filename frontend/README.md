@@ -1,69 +1,72 @@
-# React + TypeScript + Vite
+# Room Booking Platform Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React + TypeScript frontend for the Room Booking Platform.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User registration & login
+- Search for available rooms (with filters and pagination)
+- Book rooms with real-time availability
+- View upcoming bookings
+- Responsive UI with Tailwind CSS
+- State management via Redux Toolkit
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Install dependencies:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+2. Start the development server:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+   ```bash
+   npm run dev
+   ```
+
+3. The app will run at [http://localhost:3000](http://localhost:3000).
+
+## Configuration
+
+- API endpoints are configured in [`src/environment/environment.dev.ts`](src/environment/environment.dev.ts).
+- By default, the frontend connects to:
+  - User Service: [http://localhost:3001](http://localhost:3001)
+  - Booking Service: [http://localhost:3002](http://localhost:3002)
+- Update these URLs if your backend runs elsewhere.
+
+## Scripts
+
+- `npm run dev` — Start development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview production build
+- `npm run lint` — Run ESLint
+
+## Tech Stack
+
+- React
+- TypeScript
+- Redux Toolkit
+- Axios
+- Tailwind CSS
+- Framer Motion
+- Socket.IO (for real-time booking updates)
+
+## Project Structure
+
+```
+src/
+  components/      # UI and feature components
+  pages/           # Route pages
+  models/          # TypeScript models
+  services/        # API service layer
+  store/           # Redux store and slices
+  utils/           # Utility functions
+  environment/     # Environment configs
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Notes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Make sure the backend services are running on ports 3001 and 3002.
+- Real-time booking updates are handled via Socket.IO from the Booking
