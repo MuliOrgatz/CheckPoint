@@ -1,0 +1,12 @@
+brew install postgresql
+brew services start postgresql
+
+createdb user_service_db
+createdb booking_service_db
+
+
+psql postgres
+# In the psql shell:
+CREATE USER muli WITH PASSWORD '123123';
+GRANT ALL PRIVILEGES ON DATABASE user_service_db TO muli;
+GRANT ALL PRIVILEGES ON DATABASE booking_service_db TO muli;

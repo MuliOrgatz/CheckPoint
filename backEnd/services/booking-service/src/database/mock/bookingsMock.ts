@@ -1,0 +1,51 @@
+export const bookingsMock = [
+  {
+    roomId: 1,
+    userId: 101,
+    startTime: '2025-09-01',
+    endTime: '2025-09-05',
+    status: 'confirmed',
+  },
+  {
+    roomId: 2,
+    userId: 102,
+    startTime: '2025-09-02',
+    endTime: '2025-09-02',
+    status: 'confirmed',
+  },
+  {
+    roomId: 3,
+    userId: 103,
+    startTime: '2025-09-03',
+    endTime: '2025-09-03',
+    status: 'cancelled',
+  },
+  {
+    roomId: 4,
+    userId: 104,
+    startTime: '2025-09-04',
+    endTime: '2025-09-04',
+    status: 'confirmed',
+  },
+  {
+    roomId: 5,
+    userId: 105,
+    startTime: '2025-09-05',
+    endTime: '2025-09-05',
+    status: 'confirmed',
+  },
+  {
+    roomId: 6,
+    userId: 106,
+    startTime: '2025-09-06',
+    endTime: '2025-09-06',
+    status: 'confirmed',
+  },
+  {
+    roomId: 7,
+    userId: 107,
+    startTime: '2025-09-07',
+    endTime: '2025-09-07',
+    status: 'confirmed',
+  },
+];

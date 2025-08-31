@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+@theme {
+  --default-font-family: 'Open sans';
+
+  --color-turquoise: #388084;
+  --color-turquoise-200: #f2f9f9;
+  --color-turquoise-300: #d8eeec;
+  --color-turquoise-400: #9dd4cf;
+  --color-turquoise-500: #6fc2b4;
+  --color-turquoise-600: #388084;
+  --color-turquoise-700: #004f59;
+  --color-darkTurquoise: #05143e;
+  --color-black: #212121;
+  --color-gray: #e5e5e5;
+  --color-gray-500: #e6e6e6;
+  --color-darkGray: #646567;
+  --color-disable: #bbbaba;
+  --color-blue-100: #edf6ff;
+  --color-blue-500: #62b5e5;
+  --color-orange-500: #ec7d15;
+  --color-yellow-100: #fdf7e8;
+  --color-yellow-600: #ecb015;
+  --color-green-100: #f3f8e9;
+  --color-green-300: #e3e48d;
+  --color-green-500: #86bc25;
+  --color-green-800: #2b662f;
+  --color-red-500: #ee5454;
+  --color-pink: #e40c5b;
+  --color-darkPink: #b70d4e;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --text-xxs: 0.75rem;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.3125rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.375rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2rem;
+
+  --shadow-lg: 0px 3px 42px 26px rgba(0, 0, 0, 0.07);
+  --shadow-sm: 0px 0px 27px 5px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 2px 2px 12px 0px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0px 13px 31px 0px rgba(0, 0, 0, 0.16);
+  --shadow-xs: 0px 4px 60px 0px rgba(0, 0, 0, 0.15);
+}
